@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rio Acroyoga Open Jam</title>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2f6f4e;
+            --primary-dark: #1f4d36;
+            --bg: #0e1a14;
+            --surface: #1c2f26;
+            --text: #f5f7f6;
+            --text-secondary: #c7d2cc;
+            --accent: #4caf7d;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .title-main {
+            font-size: clamp(2.6rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.05;
+            white-space: nowrap;
+            background: linear-gradient(135deg, var(--accent), #7bcfa8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--surface);
+            padding: 0.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 2px solid transparent;
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        section {
+            background: var(--surface);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        h3 {
+            color: #7bcfa8;
+            font-size: 1.2rem;
+            margin: 1.2rem 0 0.6rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding-left: 1.4rem;
+            position: relative;
+            margin-bottom: 0.6rem;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 1.5rem;
+            background: linear-gradient(
+                135deg,
+                rgba(47, 111, 78, 0.15),
+                rgba(76, 175, 125, 0.15)
+            );
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .highlight {
+            background: rgba(76, 175, 125, 0.2);
+            padding: 1rem;
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .auto-detect-notice {
+            text-align: center;
+            padding: 0.75rem;
+            background: rgba(76, 175, 125, 0.15);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .lang-switch {
+                position: static;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+            .title-main {
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="lang-switch">
+    <button class="lang-btn" data-lang="pt" onclick="switchLang('pt')">PT</button>
+    <button class="lang-btn" data-lang="es" onclick="switchLang('es')">ES</button>
+    <button class="lang-btn" data-lang="en" onclick="switchLang('en')">EN</button>
+</div>
+
+<div class="container">
+    <div id="autoDetectNotice" class="auto-detect-notice"></div>
+
+    <!-- PT-BR -->
+    <div id="pt" class="content">
+        <header>
+            <h1 class="title-main">Rio Acroyoga Open Jam</h1>
+        </header>
+
+        <div class="intro">
+            Um espaço aberto de encontro, prática e convivência em acroyoga.<br>
+            Todos são bem-vindos. O que nos une é a prática como treino, brincadeira
+            e experiência humana compartilhada.
+        </div>
+
+        <section>
+            <h2>Princípios</h2>
+            <ul>
+                <li>Jam aberta e gratuita</li>
+                <li>Se você está se divertindo, está no caminho certo</li>
+                <li>Diversão não exclui treino técnico, foco e responsabilidade</li>
+                <li>Cada pessoa cuida de si e do coletivo</li>
+                <li>Acroyoga sem assédio, em qualquer forma</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Segurança</h2>
+
+            <h3>Respeito aos limites</h3>
+            <p>
+                Dizer “não” é um ato de cuidado. Comunique seus limites com clareza.
+                Respeite os limites do outro com simplicidade. Sem insistência.
+                Sem explicações exigidas.
+            </p>
+
+            <div class="highlight">
+                <h3>Palavra de segurança: “DOWN”</h3>
+                <p>
+                    Qualquer pessoa pode dizer “down” para interromper imediatamente
+                    o movimento. Primeiro para. Depois, se necessário, conversa.
+                </p>
+            </div>
+
+            <h3>Contato físico</h3>
+            <p>
+                Faz parte da prática. Se algo incomodar, avise. Ajuste vem depois
+                do respeito.
+            </p>
+
+            <h3>Colaboração</h3>
+            <p>
+                Observe seus limites. Evite corrigir em excesso ou de forma
+                acusatória. A jam não é palco nem disputa.
+            </p>
+        </section>
+
+        <section>
+            <h2>Cuidadores (Spotters)</h2>
+            <ul>
+                <li>Qualquer pessoa pode pedir cuidador a qualquer momento</li>
+                <li>O pedido deve ser respeitado</li>
+                <li>Se não se sentir seguro para cuidar, avise</li>
+                <li>Ouça como base ou voador preferem ser cuidados</li>
+                <li>Ao cuidar, responsabilize-se pela segurança</li>
+                <li>Duplas podem optar por praticar sem cuidador, se ambos concordarem</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Fotos e Vídeos</h2>
+            <ul>
+                <li>São permitidos, mas não são o objetivo principal</li>
+                <li>Se alguém pedir para remover uma imagem, o pedido deve ser respeitado</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Mediação</h2>
+            <p>
+                Se algo gerar desconforto, há mediadores disponíveis para conversar
+                em particular e ajudar a resolver.
+            </p>
+        </section>
+
+        <section>
+            <h2>Espírito da Jam</h2>
+            <p>A jam é um encontro para brincar, aprender e cuidar juntos.</p>
+            <p><strong>Universal:</strong> todos os níveis, escolas e culturas.</p>
+            <p><strong>Comunitária:</strong> não é aula, competição ou vitrine.</p>
+            <p><strong>Compartilhada:</strong> leveza com responsabilidade.</p>
+        </section>
+    </div>
+
+</div>
+
+<script>
+    function detectLanguage() {
+        const lang = (navigator.language || 'en').toLowerCase();
+        if (lang.startsWith('pt')) return 'pt';
+        if (lang.startsWith('es')) return 'es';
+        return 'en';
+    }
+
+    function switchLang(lang) {
+        document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+        document.getElementById(lang).classList.add('active');
+
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+        localStorage.setItem('preferredLang', lang);
+        document.getElementById('autoDetectNotice').style.display = 'none';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('preferredLang');
+        const lang = saved || detectLanguage();
+
+        if (!saved) {
+            const notice = document.getElementById('autoDetectNotice');
+            notice.textContent = 'Idioma detectado automaticamente. Você pode alterá-lo acima.';
+            setTimeout(() => notice.style.display = 'none', 5000);
+        }
+
+        switchLang(lang);
+    });
+</script>
+
+</body>
+</html>
