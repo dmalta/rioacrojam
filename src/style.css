@@ -62,6 +62,12 @@ header {
   border: 1px solid var(--accent);
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+  color: #0e1a14;
 }
 
 .lang-switch {
@@ -91,6 +97,12 @@ header {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-btn:hover:not(.active) {
+  background: rgba(76, 175, 125, 0.15);
+  color: #7bcfa8;
 }
 
 .lang-btn.active {
@@ -119,6 +131,10 @@ h3 {
 p {
   margin-bottom: 1rem;
   color: var(--text-secondary);
+}
+
+section p:last-child {
+  margin-bottom: 0;
 }
 
 p a, li a {
