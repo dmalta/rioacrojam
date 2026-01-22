@@ -56,7 +56,7 @@ const messages = {
       '<strong>No hay espacio para el acoso</strong>, sea físico, verbal o psicológico',
       'Cada persona es <strong>responsable de sí misma y del colectivo</strong>'
     ],
-    recommendations: 'Seguridad',
+    recommendations: 'Recomendaciones',
     respectLimits: 'Respeto a los límites',
     respectLimitsText: 'Decir "no" es un acto de amor propio y respeto hacia el otro. Comunica tus límites con claridad. Respeta los límites de cada uno con simplicidad y sigue adelante.',
     safetyWord: 'Palabra de seguridad: "DOWN"',
@@ -100,7 +100,7 @@ const messages = {
       '<strong>There is no room for harassment</strong>, whether physical, verbal, or psychological',
       'Each person is <strong>responsible for themselves and the collective</strong>'
     ],
-    recommendations: 'Safety',
+    recommendations: 'Recommendations',
     respectLimits: 'Respect for boundaries',
     respectLimitsText: 'Saying "no" is an act of self-love and respect for others. Communicate your limits clearly. Respect everyone\'s boundaries with simplicity and move on.',
     safetyWord: 'Safety word: "DOWN"',
