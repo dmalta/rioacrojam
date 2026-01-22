@@ -14,14 +14,14 @@
 
     <div class="intro" v-html="$t('intro')"></div>
 
-    <section>
+    <section id="principios">
       <h2>{{ $t('principles') }}</h2>
       <ul>
         <li v-for="item in $tm('principlesList')" :key="item" v-html="item"></li>
       </ul>
     </section>
 
-    <section>
+    <section id="recomendacoes">
       <h2>{{ $t('recommendations') }}</h2>
 
       <h3>{{ $t('respectLimits') }}</h3>
@@ -49,7 +49,7 @@
       <p>{{ $t('mediationText') }}</p>
     </section>
 
-    <section>
+    <section id="local">
       <h2>{{ $t('locationTime') }}</h2>
 
       <p><strong>{{ $t('locationLabel') }}</strong> <span v-html="$t('locationText')"></span></p>
