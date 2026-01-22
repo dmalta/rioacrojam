@@ -4,17 +4,15 @@
       <h1 class="title-main">{{ $t('title') }}</h1>
       <div class="social-links">
         <a href="https://chat.whatsapp.com/C0TqXruUYZxCwvahoUE3Y1" target="_blank">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          <font-awesome-icon :icon="['fab', 'whatsapp']" /> WhatsApp
         </a>
         <a href="https://instagram.com/rioacrojam" target="_blank">
-          <i class="fa-brands fa-instagram"></i> Instagram
+          <font-awesome-icon :icon="['fab', 'instagram']" /> Instagram
         </a>
       </div>
     </header>
 
-    <div class="intro">
-      {{ $t('intro') }}
-    </div>
+    <div class="intro" v-html="$t('intro')"></div>
 
     <section>
       <h2>{{ $t('principles') }}</h2>
@@ -52,9 +50,19 @@
     </section>
 
     <section>
-      <h2>{{ $t('spirit') }}</h2>
-      <p>{{ $t('spiritText') }}</p>
-      <div v-for="item in $tm('spiritList')" :key="item"><strong>{{ item.split(':')[0] }}:</strong> {{ item.split(':')[1].trim() }}</div>
+      <h2>{{ $t('locationTime') }}</h2>
+
+      <p><strong>{{ $t('locationLabel') }}</strong> <span v-html="$t('locationText')"></span></p>
+
+      <p><strong>{{ $t('timeLabel') }}</strong> {{ $t('timeText') }}</p>
+
+      <p><strong>{{ $t('importantLabel') }}</strong> {{ $t('importantText') }}</p>
+
+      <p><strong>{{ $t('amenitiesLabel') }}</strong> <span v-html="$t('amenitiesText')"></span></p>
+
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3845.5366229080755!2d-43.20480592449766!3d-22.974211979207716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU4JzI3LjIiUyA0M8KwMTInMDguMCJX!5e1!3m2!1sen!2sbr!4v1769116159326!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
   </div>
 </template>

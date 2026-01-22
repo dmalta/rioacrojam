@@ -3,14 +3,14 @@ import { createI18n } from 'vue-i18n'
 const messages = {
   pt: {
     title: 'Rio Acroyoga Open Jam',
-    intro: 'Este é um espaço aberto de encontro, prática e convivência de acroyoga. Todos são bem-vindos. O que nos une é o prazer da prática como treino, diversão e experiência humana compartilhada.',
+    intro: 'Nossa <i>jam</i> é um espaço aberto de encontro, prática e convivência de acroyoga. Todos são bem-vindos. O que nos une é o prazer da prática como treino, diversão e experiência humana compartilhada.',
     principles: 'Princípios',
     principlesList: [
       'Jam <strong>totalmente aberta e gratuita</strong>',
       'Se você está <strong>se divertindo</strong>, está certo',
       'Diversão não exclui <strong>treino técnico, foco e seriedade</strong>',
-      'Cada pessoa é <strong>responsável por si e pelo coletivo</strong>',
-      'Acroyoga <strong>sem assédio</strong>, em qualquer forma'
+      '<strong>Não há espaço para assédio</strong>, seja físico, verbal ou psicológico',
+      'Cada pessoa é <strong>responsável por si e pelo coletivo</strong>'
     ],
     recommendations: 'Recomendações',
     respectLimits: 'Respeito aos limites',
@@ -35,24 +35,26 @@ const messages = {
     photosVideosText: 'Fotos e vídeos são livres, mas não são nosso objetivo primário. Se alguém quiser remover uma imagem em que aparece, basta pedir — o pedido deve ser respeitado sem questionamentos.',
     mediation: 'Mediação',
     mediationText: 'Caso você se sinta desconfortável com qualquer situação, temos mediadores disponíveis para conversar em particular e ajudar a resolver.',
-    spirit: 'Espírito da Jam',
-    spiritText: 'A jam é um encontro acolhedor de amigos, novos e antigos, para brincar e aprender juntos.',
-    spiritList: [
-      'É universal: todos os níveis, escolas e culturas são bem-vindos.',
-      'É comunitária: não é aula, competição ou palco.',
-      'É prática compartilhada: cuidado mútuo, leveza com responsabilidade.'
-    ]
+    locationTime: 'Local e Horário',
+    locationLabel: 'Local:',
+    locationText: 'Lagoa Rodrigo de Freitas, no gramado próximo aos pedalinhos, ao lado do restaurante <em>Badalado</em>.',
+    timeLabel: 'Horário:',
+    timeText: 'Encontro semanal, a partir das 16h.',
+    importantLabel: 'Importante:',
+    importantText: 'Horário e local podem sofrer alterações por condições climáticas ou outros imprevistos. Antes de ir, confirme no grupo do WhatsApp. Em dias de chuva, geralmente não há jam na Lagoa.',
+    amenitiesLabel: 'Amenidades:',
+    amenitiesText: 'Logo atrás do gramado fica o <a href="https://eurionalagoa.com.br/" target="_blank" rel="noopener noreferrer"><em>Eu Rio Beach Club</em></a>, onde rola usar gratuitamente banheiros, academia, chuveiros, bares, açaí, massagem e outras facilidades. O espaço é aberto ao público, com cadastro prévio.'
   },
   es: {
     title: 'Rio Acroyoga Open Jam',
-    intro: 'Este es un espacio abierto de encuentro, práctica y convivencia de acroyoga. Todos son bienvenidos. Lo que nos une es el placer de la práctica como entrenamiento, diversión y experiencia humana compartida.',
+    intro: 'Nuestra <i>jam</i> es un espacio abierto de encuentro, práctica y convivencia de acroyoga. Todos son bienvenidos. Lo que nos une es el placer de la práctica como entrenamiento, diversión y experiencia humana compartida.',
     principles: 'Principios',
     principlesList: [
       'Jam <strong>totalmente abierta y gratuita</strong>',
       'Si te estás <strong>divirtiendo</strong>, lo estás haciendo bien',
       'La diversión no excluye el <strong>entrenamiento técnico, el enfoque y la seriedad</strong>',
-      'Cada persona es <strong>responsable de sí misma y del colectivo</strong>',
-      'Acroyoga <strong>sin acoso</strong>, en cualquier forma'
+      '<strong>No hay espacio para el acoso</strong>, sea físico, verbal o psicológico',
+      'Cada persona es <strong>responsable de sí misma y del colectivo</strong>'
     ],
     recommendations: 'Seguridad',
     respectLimits: 'Respeto a los límites',
@@ -77,24 +79,26 @@ const messages = {
     photosVideosText: 'Las fotos y videos son libres, pero no son nuestro objetivo principal. Si alguien quiere eliminar una imagen en la que aparece, solo tiene que pedirlo — la solicitud debe ser respetada sin cuestionamientos.',
     mediation: 'Mediación',
     mediationText: 'Si te sientes incómodo con cualquier situación, tenemos mediadores disponibles para conversar en privado y ayudar a resolver.',
-    spirit: 'Espíritu de la Jam',
-    spiritText: 'La jam es un encuentro acogedor de amigos, nuevos y antiguos, para jugar y aprender juntos.',
-    spiritList: [
-      'Es universal: todos los niveles, escuelas y culturas son bienvenidos.',
-      'Es comunitaria: no es una clase, competencia o escenario.',
-      'Es práctica compartida: cuidado mutuo, ligereza con responsabilidad.'
-    ]
+    locationTime: 'Lugar y Horario',
+    locationLabel: 'Lugar:',
+    locationText: 'Lagoa Rodrigo de Freitas, en el césped cerca de los botes a pedal, junto al restaurante <em>Badalado</em>.',
+    timeLabel: 'Horario:',
+    timeText: 'Encuentro semanal, a partir de las 16:00.',
+    importantLabel: 'Importante:',
+    importantText: 'El horario y el lugar pueden cambiar por condiciones climáticas u otros imprevistos. Antes de ir, confirma en el grupo de WhatsApp. En días de lluvia, normalmente no hay jam en la Lagoa.',
+    amenitiesLabel: 'Amenidades:',
+    amenitiesText: 'Justo detrás del césped está el <a href="https://eurionalagoa.com.br/" target="_blank" rel="noopener noreferrer"><em>Eu Rio Beach Club</em></a>, donde se pueden usar gratuitamente baños, gimnasio, duchas, bares, açaí, masajes y otras comodidades. El espacio está abierto al público con registro previo.'
   },
   en: {
     title: 'Rio Acroyoga Open Jam',
-    intro: 'This is an open space for meeting, practice, and community in acroyoga. Everyone is welcome. What unites us is the pleasure of practice as training, fun, and shared human experience.',
+    intro: 'Our <i>jam</i> is an open space for meeting, practice, and community in acroyoga. Everyone is welcome. What unites us is the pleasure of practice as training, fun, and shared human experience.',
     principles: 'Principles',
     principlesList: [
       'Jam is <strong>completely open and free</strong>',
       'If you\'re <strong>having fun</strong>, you\'re doing it right',
       'Fun doesn\'t exclude <strong>technical training, focus, and seriousness</strong>',
-      'Each person is <strong>responsible for themselves and the collective</strong>',
-      'Acroyoga <strong>without harassment</strong>, in any form'
+      '<strong>There is no room for harassment</strong>, whether physical, verbal, or psychological',
+      'Each person is <strong>responsible for themselves and the collective</strong>'
     ],
     recommendations: 'Safety',
     respectLimits: 'Respect for boundaries',
@@ -119,13 +123,15 @@ const messages = {
     photosVideosText: 'Photos and videos are allowed, but aren\'t our primary goal. If someone wants to remove an image they appear in, just ask — the request must be respected without questioning.',
     mediation: 'Mediation',
     mediationText: 'If you feel uncomfortable with any situation, we have mediators available to talk privately and help resolve issues.',
-    spirit: 'Spirit of the Jam',
-    spiritText: 'The jam is a welcoming gathering of friends, new and old, to play and learn together.',
-    spiritList: [
-      'It\'s universal: all levels, schools, and cultures are welcome.',
-      'It\'s community-based: it\'s not a class, competition, or stage.',
-      'It\'s shared practice: mutual care, lightness with responsibility.'
-    ]
+    locationTime: 'Location and Time',
+    locationLabel: 'Location:',
+    locationText: 'Lagoa Rodrigo de Freitas, on the grass near the pedal boats, next to the <em>Badalado</em> restaurant.',
+    timeLabel: 'Time:',
+    timeText: 'Weekly gathering, starting at 4:00 PM.',
+    importantLabel: 'Important:',
+    importantText: 'Time and location may change due to weather conditions or other unforeseen circumstances. Before going, please check the WhatsApp group. On rainy days, there is usually no jam at the Lagoa.',
+    amenitiesLabel: 'Amenities:',
+    amenitiesText: 'Right behind the grass area is the <a href="https://eurionalagoa.com.br/" target="_blank" rel="noopener noreferrer"><em>Eu Rio Beach Club</em></a>, where you can freely use restrooms, gym, showers, bars, açaí, massage, and other amenities. The space is open to the public with prior registration.'
   }
 }
 

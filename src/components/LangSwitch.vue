@@ -1,22 +1,23 @@
 <template>
   <div class="lang-switch">
+    <font-awesome-icon :icon="['fas', 'language']" class="lang-icon" />
     <button
       class="lang-btn"
       :class="{ active: route.path === '/' }"
       @click="switchLang('pt')">
-      <i class="fa-solid fa-globe"></i> PT
+      PT
     </button>
     <button
       class="lang-btn"
       :class="{ active: route.path === '/es' }"
       @click="switchLang('es')">
-      <i class="fa-solid fa-globe"></i> ES
+      ES
     </button>
     <button
       class="lang-btn"
       :class="{ active: route.path === '/en' }"
       @click="switchLang('en')">
-      <i class="fa-solid fa-globe"></i> EN
+      EN
     </button>
   </div>
 </template>
